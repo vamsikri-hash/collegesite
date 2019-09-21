@@ -1,0 +1,21 @@
+.form-group label {
+    font-size: 40px;
+    font-family: cursive;
+    font-weight: 700;
+}
+
+.btn {
+    background: #222f3e;
+    padding: 1em 2em;
+    color: aliceblue;
+    border-radius: 10px;
+    margin-top: 9px;
+}
+
+.btn:hover {
+    background: rgba(0, 0, 0, 0.875);
+}
+
+#regno {
+    font-size: 30px;
+}

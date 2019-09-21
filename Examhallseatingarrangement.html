@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Examtimetable</title>
+    <link rel="stylesheet" href="EXAM.css">
+
+    <style>
+        html {
+            margin: 30px;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 13px;
+        }
+        
+        .hide_it {
+            display: none;
+        }
+        
+        .make_visible {
+            display: table;
+        }
+        
+        .highlight {
+            background-color: #3eef0e96;
+        }
+        
+        .box-shadow--16dp {
+            box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2)
+        }
+    </style>
+
+    <script>
+        function highlighter() {
+            var temp = document.querySelectorAll(".highlight");
+            var j;
+            for (j = 0; j < temp.length; j++) {
+                temp[j].parentElement.parentElement.parentElement.classList.remove("make_visible");
+                temp[j].parentElement.parentElement.parentElement.classList.add("hide_it");
+                temp[j].classList.remove("highlight");
+            }
+            if (document.getElementById("regno").value != null) {
+                var x = document.getElementsByClassName(document.getElementById("regno").value);
+                var i;
+                for (i = 0; i < x.length; i++) {
+                    x[i].parentElement.parentElement.parentElement.classList.remove("hide_it");
+                    x[i].classList.add("highlight");
+                    x[i].parentElement.parentElement.parentElement.classList.add("make_visible");
+                }
+            }
+            return false;
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <hr>
+    <img src="NAM.png" alt="" style="width:100%;height:200px">
+    <hr>
+    <div id="custom_form" class="container">
+        <form class="form-inline" onsubmit=" return highlighter();">
+            <div class="form-group">
+                <label for="regno">Enter valid Register No(eg:101-140):</label>
+                <input type="number" class="form-control" id="regno" placeholder="Enter Register Number" name="regno">
+            </div>
+            <button type="press submit" class="btn">Submit</button>
+        </form>
+    </div>
+    <div class="responsive">
+        <table class="table table-bordered box-shadow--16dp hide_it" style="width:100%">
+            <tr>
+                <th colspan=10>SASTRA UNIVERSITY</th>
+            </tr>
+            <tr>
+                <th colspan=10>UNIVERSITY WITH UNIQUENESS</th>
+            </tr>
+            <tr>
+                <th colspan=10>SEMESTER HALL PLAN</th>
+            </tr>
+            <tr>
+                <th style="text-align:left" colspan=5> HALL:: ROOM NO:1</th>
+                <th style="text-align:right" colspan=5>TIME::2:00 TO 5:00</th>
+            </tr>
+            <tr>
+                <th colspan=5 style="width:50%; text-align:left">Date : MAY 2019-2020,WEEK-1</th>
+                <th colspan=5 style="width:50%; text-align:right">CSEA / CSEB</th>
+            </tr>
+            <tr>
+                <th>COLOUMN1 - CSEA</th>
+                <th>COLOUMN2 - CSEB</th>
+                <th>COLOUMN3 - CSEA</th>
+                <th>COLOUMN4 - CSEB</th>
+                <th>COLOUMN5 - CSEA</th>
+                <th>COLOUMN6 - CSEB</th>
+                <th>COLOUMN7 - CSEA</th>
+                <th>COLOUMN8 - CSEB</th>
+                <th>COLOUMN9 - CSEA</th>
+                <th>COLOUMN10 - CSEB</th>
+            </tr>
+            <tr>
+                <td class="101">101</td>
+                <td class="201">201</td>
+                <td class="102">102</td>
+                <td class="202">202</td>
+                <td class="103">103</td>
+                <td class="203">203</td>
+                <td class="104">104</td>
+                <td class="204">204</td>
+                <td class="105">105</td>
+                <td class="205">205</td>
+            </tr>
+            <tr>
+                <td class="106">106</td>
+                <td class="206">206</td>
+                <td class="107">107</td>
+                <td class="207">207</td>
+                <td class="108">108</td>
+                <td class="208">208</td>
+                <td class="109">109</td>
+                <td class="209">209</td>
+                <td class="110">110</td>
+                <td class="210">210</td>
+            </tr>
+            <tr>
+                <td class="111">111</td>
+                <td class="211">211</td>
+                <td class="112">112</td>
+                <td class="212">212</td>
+                <td class="113">113</td>
+                <td class="213">213</td>
+                <td class="114">114</td>
+                <td class="214">214</td>
+                <td class="115">115</td>
+                <td class="215">215</td>
+            </tr>
+            <tr>
+                <td class="116">116</td>
+                <td class="216">216</td>
+                <td class="117">117</td>
+                <td class="217">217</td>
+                <td class="118">118</td>
+                <td class="218">218</td>
+                <td class="119">119</td>
+                <td class="219">219</td>
+                <td class="120">120</td>
+                <td class="220">220</td>
+            </tr>
+        </table>
+    </div>
+    <div class="responsive">
+        <table class="table table-bordered box-shadow--16dp hide_it" style="width:100%">
+            <tr>
+                <th colspan=10>SASTRA UNIVERSITY</th>
+            </tr>
+            <tr>
+                <th colspan=10>UNIVERSITY WITH UNIQUENESS</th>
+            </tr>
+            <tr>
+                <th colspan=10>SEMESTER HALL PLAN</th>
+            </tr>
+            <tr>
+                <th style="text-align:left" colspan=5> HALL:: ROOM NO:2</th>
+                <th style="text-align:right" colspan=5>TIME::2:00 TO 5:00</th>
+            </tr>
+            <tr>
+                <th colspan=5 style="width:50%; text-align:left">Date : MAY 2019-2020,WEEK-1</th>
+                <th colspan=5 style="width:50%; text-align:right">CSEA / CSEB</th>
+            </tr>
+            <tr>
+                <th>COLOUMN1 - CSEA</th>
+                <th>COLOUMN2 - CSEB</th>
+                <th>COLOUMN3 - CSEA</th>
+                <th>COLOUMN4 - CSEB</th>
+                <th>COLOUMN5 - CSEA</th>
+                <th>COLOUMN6 - CSEB</th>
+                <th>COLOUMN7 - CSEA</th>
+                <th>COLOUMN8 - CSEB</th>
+                <th>COLOUMN9 - CSEA</th>
+                <th>COLOUMN10 - CSEB</th>
+            </tr>
+            <tr>
+                <td class="121">121</td>
+                <td class="221">221</td>
+                <td class="122">122</td>
+                <td class="222">222</td>
+                <td class="123">123</td>
+                <td class="223">223</td>
+                <td class="124">124</td>
+                <td class="224">224</td>
+                <td class="125">125</td>
+                <td class="225">225</td>
+            </tr>
+            <tr>
+                <td class="126">126</td>
+                <td class="226">226</td>
+                <td class="127">127</td>
+                <td class="227">227</td>
+                <td class="128">128</td>
+                <td class="228">228</td>
+                <td class="129">129</td>
+                <td class="229">229</td>
+                <td class="130">130</td>
+                <td class="230">230</td>
+            </tr>
+            <tr>
+                <td class="131">131</td>
+                <td class="231">231</td>
+                <td class="132">132</td>
+                <td class="232">232</td>
+                <td class="133">133</td>
+                <td class="233">233</td>
+                <td class="134">134</td>
+                <td class="234">234</td>
+                <td class="135">135</td>
+                <td class="235">235</td>
+            </tr>
+            <tr>
+                <td class="136">136</td>
+                <td class="236">236</td>
+                <td class="137">137</td>
+                <td class="237">237</td>
+                <td class="138">138</td>
+                <td class="238">238</td>
+                <td class="139">139</td>
+                <td class="239">239</td>
+                <td class="140">140</td>
+                <td class="240">240</td>
+            </tr>
+        </table>
+    </div>
+    <div class="responsive">
+        <table class="table table-bordered box-shadow--16dp hide_it" style="width:100%">
+            <tr>
+                <th colspan=10>SASTRA UNIVERSITY</th>
+            </tr>
+            <tr>
+                <th colspan=10>UNIVERSITY WITH UNIQUENESS</th>
+            </tr>
+            <tr>
+                <th colspan=10>SEMESTER HALL PLAN</th>
+            </tr>
+            <tr>
+                <th style="text-align:left" colspan=5> HALL:: ROOM NO:3</th>
+                <th style="text-align:right" colspan=5>TIME::2:00 TO 5:00</th>
+            </tr>
+            <tr>
+                <th colspan=5 style="width:50%; text-align:left">Date : MAY 2019-2020,WEEK-1</th>
+                <th colspan=5 style="width:50%; text-align:right">CSEC / CSEE</th>
+            </tr>
+            <tr>
+                <th>COLOUMN1 - CSEC</th>
+                <th>COLOUMN2 - CSEE</th>
+                <th>COLOUMN3 - CSEC</th>
+                <th>COLOUMN4 - CSEE</th>
+                <th>COLOUMN5 - CSEC</th>
+                <th>COLOUMN6 - CSEE</th>
+                <th>COLOUMN7 - CSEC</th>
+                <th>COLOUMN8 - CSEE</th>
+                <th>COLOUMN9 - CSEC</th>
+                <th>COLOUMN10 - CSEE</th>
+            </tr>
+            <tr>
+                <td class="301">301</td>
+                <td class="501">501</td>
+                <td class="302">302</td>
+                <td class="502">502</td>
+                <td class="303">303</td>
+                <td class="503">503</td>
+                <td class="304">304</td>
+                <td class="504">504</td>
+                <td class="305">305</td>
+                <td class="505">505</td>
+            </tr>
+            <tr>
+                <td class="306">306</td>
+                <td class="506">506</td>
+                <td class="307">307</td>
+                <td class="507">507</td>
+                <td class="308">308</td>
+                <td class="508">508</td>
+                <td class="309">309</td>
+                <td class="509">509</td>
+                <td class="310">310</td>
+                <td class="510">510</td>
+            </tr>
+            <tr>
+                <td class="311">311</td>
+                <td class="511">511</td>
+                <td class="312">312</td>
+                <td class="512">512</td>
+                <td class="313">313</td>
+                <td class="513">513</td>
+                <td class="314">314</td>
+                <td class="514">514</td>
+                <td class="315">315</td>
+                <td class="515">515</td>
+            </tr>
+            <tr>
+                <td class="316">316</td>
+                <td class="516">516</td>
+                <td class="317">317</td>
+                <td class="517">517</td>
+                <td class="318">318</td>
+                <td class="518">518</td>
+                <td class="319">319</td>
+                <td class="519">519</td>
+                <td class="320">320</td>
+                <td class="520">520</td>
+            </tr>
+        </table>
+    </div>
+    <table class="table table-bordered box-shadow--16dp hide_it" style="width:100%">
+        <tr>
+            <th colspan=10>SASTRA UNIVERSITY</th>
+        </tr>
+        <tr>
+            <th colspan=10>UNIVERSITY WITH UNIQUENESS</th>
+        </tr>
+        <tr>
+            <th colspan=10>SEMESTER HALL PLAN</th>
+        </tr>
+        <tr>
+            <th style="text-align:left" colspan=5> HALL:: ROOM NO:4</th>
+            <th style="text-align:right" colspan=5>TIME::2:00 TO 5:00</th>
+        </tr>
+        <tr>
+            <th colspan=5 style="width:50%; text-align:left">Date : MAY 2019-2020,WEEK-1</th>
+            <th colspan=5 style="width:50%; text-align:right">CSEC / CSED</th>
+        </tr>
+        <tr>
+            <th>COLOUMN1 - CSEC</th>
+            <th>COLOUMN2 - CSED</th>
+            <th>COLOUMN3 - CSEC</th>
+            <th>COLOUMN4 - CSED</th>
+            <th>COLOUMN5 - CSEC</th>
+            <th>COLOUMN6 - CSED</th>
+            <th>COLOUMN7 - CSEC</th>
+            <th>COLOUMN8 - CSED</th>
+            <th>COLOUMN9 - CSEC</th>
+            <th>COLOUMN10 - CSED</th>
+        </tr>
+        <tr>
+            <td class="321">321</td>
+            <td class="421">421</td>
+            <td class="322">322</td>
+            <td class="422">422</td>
+            <td class="323">323</td>
+            <td class="423">423</td>
+            <td class="324">324</td>
+            <td class="424">424</td>
+            <td class="325">325</td>
+            <td class="425">425</td>
+        </tr>
+        <tr>
+            <td class="326">326</td>
+            <td class="426">426</td>
+            <td class="327">327</td>
+            <td class="427">427</td>
+            <td class="328">328</td>
+            <td class="428">428</td>
+            <td class="329">329</td>
+            <td class="429">429</td>
+            <td class="330">330</td>
+            <td class="430">430</td>
+        </tr>
+        <tr>
+            <td class="331">331</td>
+            <td class="431">431</td>
+            <td class="332">332</td>
+            <td class="432">432</td>
+            <td class="333">333</td>
+            <td class="433">433</td>
+            <td class="334">334</td>
+            <td class="434">434</td>
+            <td class="335">335</td>
+            <td class="435">435</td>
+        </tr>
+        <tr>
+            <td class="336">336</td>
+            <td class="436">436</td>
+            <td class="337">337</td>
+            <td class="437">437</td>
+            <td class="338">338</td>
+            <td class="438">438</td>
+            <td class="339">339</td>
+            <td class="439">439</td>
+            <td class="340">340</td>
+            <td class="440">440</td>
+        </tr>
+    </table>
+    </div>
+    <div class="responsive">
+        <table class="table table-bordered box-shadow--16dp hide_it" style="width:100%">
+            <tr>
+                <th colspan=10>SASTRA UNIVERSITY</th>
+            </tr>
+            <tr>
+                <th colspan=10>UNIVERSITY WITH UNIQUENESS</th>
+            </tr>
+            <tr>
+                <th colspan=10>SEMESTER HALL PLAN</th>
+            </tr>
+            <tr>
+                <th style="text-align:left" colspan=5> HALL:: ROOM NO:5</th>
+                <th style="text-align:right" colspan=5>TIME::2:00 TO 5:00</th>
+            </tr>
+            <tr>
+                <th colspan=5 style="width:50%; text-align:left">Date : MAY 2019-2020,WEEK-1</th>
+                <th colspan=5 style="width:50%; text-align:right">CSED / CSEE</th>
+            </tr>
+            <tr>
+                <th>COLOUMN1 - CSED</th>
+                <th>COLOUMN2 - CSEE</th>
+                <th>COLOUMN3 - CSED</th>
+                <th>COLOUMN4 - CSEE</th>
+                <th>COLOUMN5 - CSED</th>
+                <th>COLOUMN6 - CSEE</th>
+                <th>COLOUMN7 - CSED</th>
+                <th>COLOUMN8 - CSEE</th>
+                <th>COLOUMN9 - CSED</th>
+                <th>COLOUMN10 - CSEE</th>
+            </tr>
+            <tr>
+                <td class="401">401</td>
+                <td class="521">521</td>
+                <td class="402">402</td>
+                <td class="522">522</td>
+                <td class="403">403</td>
+                <td class="523">523</td>
+                <td class="404">404</td>
+                <td class="524">524</td>
+                <td class="405">405</td>
+                <td class="525">525</td>
+            </tr>
+            <tr>
+                <td class="406">406</td>
+                <td class="526">526</td>
+                <td class="407">407</td>
+                <td class="527">527</td>
+                <td class="408">408</td>
+                <td class="528">528</td>
+                <td class="409">409</td>
+                <td class="529">529</td>
+                <td class="410">410</td>
+                <td class="530">530</td>
+            </tr>
+            <tr>
+                <td class="411">411</td>
+                <td class="531">531</td>
+                <td class="412">412</td>
+                <td class="532">532</td>
+                <td class="413">413</td>
+                <td class="533">533</td>
+                <td class="414">414</td>
+                <td class="534">534</td>
+                <td class="415">415</td>
+                <td class="535">535</td>
+            </tr>
+            <tr>
+                <td class="416">416</td>
+                <td class="536">536</td>
+                <td class="417">417</td>
+                <td class="537">537</td>
+                <td class="418">418</td>
+                <td class="538">538</td>
+                <td class="419">419</td>
+                <td class="539">539</td>
+                <td class="420">420</td>
+                <td class="540">540</td>
+            </tr>
+        </table>
+    </div>
+    <div class="responsive">
+
+
+        <img src="exam1.jpg" alt="" style="width:49%;height:250px;padding-right:10px;float:left">
+        <img src="classroom.jpg" alt="" style="width:49%;height:250px;float:right">
+        <hr>
+</body>
+
+</html>

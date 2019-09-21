@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>first web</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <div class="box" id="kri">
+
+        <div class="overimage">
+
+            <h1>LOGIN</h1>
+            <div class="ro">
+                <span class="fas fa-user" id="ja"></span>
+                <input id="mail" type="text" name="" placeholder=" User Name" required>
+            </div>
+            <div class="ro">
+                <i class="fas fa-key" id="ja"></i>
+                <input id="pass" type="password" name="" placeholder="password" required>
+            </div>
+            <button id="sub" onclick="login()">Sign In</button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDdeuiegiOxrp3rsV7W5nkMeLPbIFL4uYI",
+            authDomain: "university-website-c8393.firebaseapp.com",
+            databaseURL: "https://university-website-c8393.firebaseio.com",
+            projectId: "university-website-c8393",
+            storageBucket: "university-website-c8393.appspot.com",
+            messagingSenderId: "695664030536"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script src="ex.js"></script>
+    <script>
+        window.location.hash = "no-back-button";
+        window.location.hash = "Again-No-back-button"; //again because google chrome don't insert first hash into history
+        window.onhashchange = function() {
+            window.location.hash = "no-back-button";
+        }
+    </script>
+
+</body>
+
+</html>

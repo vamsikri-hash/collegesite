@@ -1,2 +1,9 @@
-#collegewebsite
-my first frontend design of college site using HTML,CSS AND little JS
+## My First Assignment On HTML and CSS(with little js)
+
+Basically the Static website consists of Following Pages
+
+- Home
+- About
+- Login
+- Timetable
+- Exam Schedule
